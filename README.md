@@ -18,13 +18,16 @@ The binaries FCL 5.0 and `geometric_shapes` should be already installed on your 
 ### libccd
 
 Please ensure this option is enabled, when compiling: 
+Creates the compiled files for libccd --> Do this so that FindCCD error doesnt appear while compiling the repository
 >> -DENABLE_DOUBLE_PRECISION=ON
-
-1. git clone https://github.com/danfis/libccd.git
-2. mkdir build && cd build
-3. cmake -G "Unix Makefiles" -DENABLE_DOUBLE_PRECISION=ON ..
-4. make
-5. sudo make install
+Inside the catkin workspace
+1. cd catkin_ws/src/
+2. git clone https://github.com/danfis/libccd.git
+3. cd libccd
+4. mkdir build && cd build
+5. cmake -G "Unix Makefiles" -DENABLE_DOUBLE_PRECISION=ON ..
+6. make
+7. sudo make install
 
 ### FCL
 1. git clone https://github.com/flexible-collision-library/fcl.git
